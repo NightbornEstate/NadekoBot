@@ -224,7 +224,8 @@ namespace NadekoBot.Core.Services
         {
             try
             {
-                if (msg.Author.IsBot || !_bot.Ready.Task.IsCompleted) //no bots, wait until bot connected and initialized
+                //if (msg.Author.IsBot || !_bot.Ready.Task.IsCompleted) //no bots, wait until bot connected and initialized
+                if (!_bot.Ready.Task.IsCompleted) // WE <3 BOTS
                     return;
 
                 if (!(msg is SocketUserMessage usrMsg))
