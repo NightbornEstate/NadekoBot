@@ -224,7 +224,7 @@ namespace NadekoBot.Core.Services
         {
             try
             {
-                var sunsetID = 320711277402128404:
+                var sunsetId = 320711277402128404:
                 var cuId = 369495095956865025;
                 //if (msg.Author.IsBot || !_bot.Ready.Task.IsCompleted) //no bots, wait until bot connected and initialized
                 if (
