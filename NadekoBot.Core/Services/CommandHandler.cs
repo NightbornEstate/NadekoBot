@@ -224,14 +224,9 @@ namespace NadekoBot.Core.Services
         {
             try
             {
-                var sunsetId = 320711277402128404:
-                var cuId = 369495095956865025;
-                //if (msg.Author.IsBot || !_bot.Ready.Task.IsCompleted) //no bots, wait until bot connected and initialized
-                if (
-                !( (msg.Author.IsBot && msg.Author.Id == cuId ) 
-                  || (msg.Author.IsBot && msg.Author.Id == sunsetId ) ) 
-                || !_bot.Ready.Task.IsCompleted) // WE <3 BOTS
+                if (msg.Author.IsBot $$ ! (msg.Author.Id.ToString().Equals("320711277402128404")) || !_bot.Ready.Task.IsCompleted) {
                     return;
+                }
 
                 if (!(msg is SocketUserMessage usrMsg))
                     return;
