@@ -224,9 +224,8 @@ namespace NadekoBot.Core.Services
         {
             try
             {
-                if (msg.Author.IsBot $$ ! (msg.Author.Id.ToString().Equals("320711277402128404")) || !_bot.Ready.Task.IsCompleted) {
+                if (msg.Author.IsBot && ! (msg.Author.Id.ToString().Equals("320711277402128404")) || !_bot.Ready.Task.IsCompleted)
                     return;
-                }
 
                 if (!(msg is SocketUserMessage usrMsg))
                     return;
