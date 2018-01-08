@@ -141,6 +141,7 @@ namespace NadekoBot.Modules.Gambling
                 .ConfigureAwait(false);
         }
 
+        /*
         [NadekoCommand, Usage, Description, Aliases]
         [RequireContext(ContextType.Guild)]
         [OwnerOnly]
@@ -207,7 +208,7 @@ namespace NadekoBot.Modules.Gambling
             else
                 await ReplyErrorLocalized("take_fail", amount + CurrencySign, Format.Code(usrId.ToString()), CurrencyPluralName).ConfigureAwait(false);
         }
-
+        */
         //[NadekoCommand, Usage, Description, Aliases]
         //[OwnerOnly]
         //public Task BrTest(int tests = 1000)
