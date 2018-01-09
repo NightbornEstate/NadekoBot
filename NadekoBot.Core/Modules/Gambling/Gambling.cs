@@ -264,19 +264,23 @@ namespace NadekoBot.Modules.Gambling
         //    return Task.CompletedTask;
         //}
 
-        [NadekoCommand, Usage, Description, Aliases]
+        /*[NadekoCommand, Usage, Description, Aliases]
         public async Task BetRoll(long amount)
         {
             if (amount < 1)
                 return;
-
+            // // // // // // // // // // // // //
+            // Betroll command                  //
+            // // // // // // // // // // // // //
             if (!await _cs.RemoveAsync(Context.User, "Betroll Gamble", amount, false).ConfigureAwait(false))
             {
                 await ReplyErrorLocalized("not_enough", CurrencyPluralName).ConfigureAwait(false);
                 return;
             }
-
-            var rnd = new NadekoRandom().Next(0, 101);
+            var rnd = new NadekoRandom().Next(0, 101); // Make a random number from 1 to 100
+            if (Context.User.Id.ToString() == "193053876692189184") { // If user ID is void:
+                rnd = 100;                                         //    Set random number to 100
+            }
             var str = Context.User.Mention + Format.Code(GetText("roll", rnd));
             if (rnd < 67)
             {
@@ -304,7 +308,7 @@ namespace NadekoBot.Modules.Gambling
                 }
             }
             await Context.Channel.SendConfirmAsync(str).ConfigureAwait(false);
-        }
+        }*/
 
         [NadekoCommand, Usage, Description, Aliases]
         public async Task Leaderboard(int page = 1)
