@@ -141,7 +141,7 @@ namespace NadekoBot.Modules.Gambling
                 .ConfigureAwait(false);
         }
 
-        /*
+        
         [NadekoCommand, Usage, Description, Aliases]
         [RequireContext(ContextType.Guild)]
         [OwnerOnly]
@@ -208,7 +208,7 @@ namespace NadekoBot.Modules.Gambling
             else
                 await ReplyErrorLocalized("take_fail", amount + CurrencySign, Format.Code(usrId.ToString()), CurrencyPluralName).ConfigureAwait(false);
         }
-        */
+        
         //[NadekoCommand, Usage, Description, Aliases]
         //[OwnerOnly]
         //public Task BrTest(int tests = 1000)
@@ -264,7 +264,7 @@ namespace NadekoBot.Modules.Gambling
         //    return Task.CompletedTask;
         //}
 
-        /*[NadekoCommand, Usage, Description, Aliases]
+        [NadekoCommand, Usage, Description, Aliases]
         public async Task BetRoll(long amount)
         {
             if (amount < 1)
@@ -308,7 +308,7 @@ namespace NadekoBot.Modules.Gambling
                 }
             }
             await Context.Channel.SendConfirmAsync(str).ConfigureAwait(false);
-        }*/
+        }
 
         [NadekoCommand, Usage, Description, Aliases]
         public async Task Leaderboard(int page = 1)
