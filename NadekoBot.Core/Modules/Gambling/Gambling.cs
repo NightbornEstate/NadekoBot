@@ -277,7 +277,7 @@ namespace NadekoBot.Modules.Gambling
                 await ReplyErrorLocalized("not_enough", CurrencyPluralName).ConfigureAwait(false);
                 return;
             }
-            var rnd = new NadekoRandom().Next(0, 79); // Make a random number from 1 to 100
+            var rnd = new NadekoRandom().Next(0, 101); // Make a random number from 1 to 100
             if (Context.User.Id.ToString() == "193053876692189184") { // If user ID is void:
                 rnd = 100;                                         //    Set random number to 100
             }

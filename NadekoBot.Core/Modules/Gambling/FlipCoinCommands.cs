@@ -101,30 +101,16 @@ namespace NadekoBot.Modules.Gambling
                 }
                 BetFlipGuess result;
                 IEnumerable<byte> imageToSend;
-                if (guess == BetFlipGuess.Heads) {
-                    if (rng.Next(0, 2) == 1 && rng.Next(0, 2) == 1)
-                    {
-                        imageToSend = _images.Heads;
-                        result = BetFlipGuess.Heads;
-                    }
-                    else
-                    {
-                        imageToSend = _images.Tails;
-                        result = BetFlipGuess.Tails;
-                    }
-                } else {
-                    if (rng.Next(0, 2) == 1 || rng.Next(0, 2) == 1)
-                    {
-                        imageToSend = _images.Heads;
-                        result = BetFlipGuess.Heads;
-                    }
-                    else
-                    {
-                        imageToSend = _images.Tails;
-                        result = BetFlipGuess.Tails;
-                    }
+                if (rng.Next(0, 2) == 1)
+                {
+                    imageToSend = _images.Heads;
+                    result = BetFlipGuess.Heads;
                 }
-                
+                else
+                {
+                    imageToSend = _images.Tails;
+                    result = BetFlipGuess.Tails;
+                }
 
                 string str;
                 if (guess == result)
